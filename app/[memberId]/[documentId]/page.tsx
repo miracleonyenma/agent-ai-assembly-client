@@ -34,7 +34,7 @@ const DocumentPage = async ({
               <p>{document?.project?.description}</p>
             </div>
           </header>
-          <div className="prose max-w-full py-6">
+          <div className="prose dark:prose-invert max-w-full py-6">
             {/* <Markdown remarkPlugins={[remarkGfm]}>
               {document?.markdown}
             </Markdown> */}

@@ -1,6 +1,7 @@
 import ErrorPage from "@/components/Error/Page";
 import getProjectDocument from "@/utils/document/getDocument";
-import Markdown from "react-markdown";
+// import Markdown from "react-markdown";
+// import remarkGfm from "remark-gfm";
 
 const handleGetDocument = async (documentId: string, memberId: string) => {
   const data = await getProjectDocument({
@@ -34,7 +35,10 @@ const DocumentPage = async ({
             </div>
           </header>
           <div className="prose max-w-full py-6">
-            <Markdown>{document?.markdown}</Markdown>
+            {/* <Markdown remarkPlugins={[remarkGfm]}>
+              {document?.markdown}
+            </Markdown> */}
+            <div dangerouslySetInnerHTML={{ __html: document?.html || "" }} />
           </div>
         </div>
       </article>

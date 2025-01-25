@@ -1,4 +1,6 @@
 import type { Config } from "tailwindcss";
+import defualtTheme from "tailwindcss/defaultTheme";
+import typography from "@tailwindcss/typography";
 
 export default {
   content: [
@@ -8,11 +10,14 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Host Grotesk", ...defualtTheme.fontFamily.sans],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
     },
   },
-  plugins: [],
+  plugins: [typography],
 } satisfies Config;

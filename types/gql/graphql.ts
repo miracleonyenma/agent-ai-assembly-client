@@ -263,6 +263,11 @@ export type ProjectDocument = {
   updatedAt?: Maybe<Scalars['String']['output']>;
 };
 
+export type ProjectDocumentFilter = {
+  member?: InputMaybe<Scalars['ID']['input']>;
+  project?: InputMaybe<Scalars['ID']['input']>;
+};
+
 export type ProjectDocumentInput = {
   markdown: Scalars['String']['input'];
   member: Scalars['ID']['input'];
@@ -340,6 +345,7 @@ export type QueryProjectDocumentArgs = {
 
 
 export type QueryProjectDocumentsArgs = {
+  filter?: InputMaybe<ProjectDocumentFilter>;
   pagination?: InputMaybe<Pagination>;
 };
 

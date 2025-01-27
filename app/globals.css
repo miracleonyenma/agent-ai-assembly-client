@@ -16,7 +16,7 @@
     @apply p-4 py-12 lg:py-24;
   }
   .site-section > .wrapper {
-    @apply mx-auto max-w-4xl;
+    @apply mx-auto max-w-2xl;
   }
 }
 

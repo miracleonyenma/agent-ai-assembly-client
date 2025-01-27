@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Host_Grotesk } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "sonner";
 
 const HostSans = Host_Grotesk({
   variable: "--font-host-grotesk-sans",
@@ -63,6 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${HostSans.variable} antialiased`}>{children}</body>
+      <Toaster position="top-center" theme="system" />
     </html>
   );
 }
